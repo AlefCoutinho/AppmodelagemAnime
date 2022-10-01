@@ -9,26 +9,22 @@
   ],
   "anime": [
     {
-      "id": 1,
-      "nome": "Ao ashi",
-      "diretor": "",
-      "estudio": "Production I.G",
-      "qtdTemporadas": 1,
-      "sinopse": "Aoi Ashito é um jovem aspirante a jogador de futebol de uma cidadezinha no interior do Japão. Suas esperanças de entrar em um colégio com um bom clube de futebol são frustradas quando ele causa um incidente durante uma partida crítica para seu time, o que resulta em sua derrota e eliminação de seu último torneio no ensino fundamental. No entanto, ele chama a atenção de alguém importante que estava visitando de Tóquio. Como as coisas vão acabar para Ashito?",
+      "nome": "NARUTO",
+      "diretor": "ERIC",
+      "estudio": "FAMILIA DOURADO ",
+      "qtdtemporadas": 2,
+      "sinopse": "É ISSO MESMO",
       "categorias": [
-        "Escolar",
-        "Esporte",
-        "Seinen",
-        "Slice of life"
+        "Horror"
       ],
-      "plataforma": [
-        1,
-        3
+      "plataformas": [
+        "Netflix"
       ],
-      "dataLancamento": "09/04/2022",
-      "qtdEp": 12,
-      "statusDoAnime": "Lançamento",
-      "nota": 8.8
+      "dtlancamento": "2022-09-01",
+      "qtdEp": "235",
+      "statusDoAnime": "Em lançamento",
+      "nota": "5",
+      "id": 1
     }
   ],
   "plataforma": [
