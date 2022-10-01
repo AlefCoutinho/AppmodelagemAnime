@@ -6,6 +6,12 @@
 npm install
 ```
 
+### Execute o servidor JSON primeiro
+
+```
+npm run backend
+```
+
 ### Compiles and hot-reloads for development
 
 ```
@@ -34,9 +40,3 @@ vue create nome-do-projeto
 vue add router
 vue add vuetify
 npm install json-server
-
-### Execute o servidor JSON primeiro
-
-```
-npm run backend
-```
