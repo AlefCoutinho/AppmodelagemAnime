@@ -10,7 +10,7 @@
   "anime": [
     {
       "id": 1,
-      "nome": "Aoashi",
+      "nome": "Ao ashi",
       "diretor": "",
       "estudio": "Production I.G",
       "qtdTemporadas": 1,
@@ -21,6 +21,10 @@
         "Seinen",
         "Slice of life"
       ],
+      "plataforma": [
+        1,
+        3
+      ],
       "dataLancamento": "09/04/2022",
       "qtdEp": 12,
       "statusDoAnime": "Lançamento",
@@ -30,10 +34,48 @@
   "plataforma": [
     {
       "id": 1,
-      "fkAnime": 1,
       "plataforma": "Crunchyroll",
-      "tipoServico": "Pago",
-      "link": "https://www.crunchyroll.com/pt-br/search?from=&q=Ao+ashi"
+      "tipoServico": "Pago"
+    },
+    {
+      "id": 2,
+      "plataforma": "Netflix",
+      "tipoServico": "Pago"
+    },
+    {
+      "id": 3,
+      "plataforma": "Funimation",
+      "tipoServico": "Pago"
+    },
+    {
+      "id": 4,
+      "plataforma": "Amazon Prime Video",
+      "tipoServico": "Pago"
+    },
+    {
+      "id": 5,
+      "plataforma": "Hidive",
+      "tipoServico": "Pago"
+    },
+    {
+      "id": 6,
+      "plataforma": "Tubi",
+      "tipoServico": "Pago"
+    },
+    {
+      "id": 7,
+      "plataforma": "Pluto TV",
+      "tipoServico": "Pago"
+    },
+    {
+      "id": 8,
+      "plataforma": "Looke",
+      "tipoServico": "Pago"
+    },
+    {
+      "id": 9,
+      "plataforma": "YouTube",
+      "tipoServico": "Grátis"
     }
   ],
   "categorias": [
