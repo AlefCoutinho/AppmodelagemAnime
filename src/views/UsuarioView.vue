@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>Home Page</h1>
+  <div class="usuario">
+    <h1>Usuário Page</h1>
   </div>
 </template>
 

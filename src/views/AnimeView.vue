@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>Home Page</h1>
+  <div class="anime">
+    <h1>Anime Page</h1>
   </div>
 </template>
 
