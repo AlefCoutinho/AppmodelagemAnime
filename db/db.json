@@ -1,0 +1,41 @@
+{
+    "usuario":[
+        {
+            "id": 1,
+            "login": "admin",
+            "senha": "admin",
+            "email": "admin@admin.com"
+        }
+    ],
+
+    "anime":[
+        {
+            "id": 1,
+            "nome": "Aoashi",
+            "diretor": "",
+            "estudio": "Production I.G",
+            "qtdTemporadas": 1,
+            "sinopse": "Aoi Ashito é um jovem aspirante a jogador de futebol de uma cidadezinha no interior do Japão. Suas esperanças de entrar em um colégio com um bom clube de futebol são frustradas quando ele causa um incidente durante uma partida crítica para seu time, o que resulta em sua derrota e eliminação de seu último torneio no ensino fundamental. No entanto, ele chama a atenção de alguém importante que estava visitando de Tóquio. Como as coisas vão acabar para Ashito?",
+            "dataLancamento": "09/04/2022",
+            "qtdEp": 12,
+            "statusDoAnime": "Lançamento",
+            "nota": 8.8
+        }
+    ],
+    "plataforma":[
+        {   
+            "id": 1,
+            "fkAnime": 1,
+            "plataforma": "Crunchyroll",
+            "tipoServico": "Pago",
+            "link": "https://www.crunchyroll.com/pt-br/search?from=&q=Ao+ashi"
+        }
+    ],
+    "categoria":[
+        {   
+            "id": 1,
+            "fkAnime": 1,
+            "categorias": ["escolar", "esportes", "seinen", "slice of life"]
+        }
+    ]
+}
