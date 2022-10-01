@@ -22,6 +22,12 @@
             </v-col>
             </v-row>
             <v-row class="text-center lighten-4 blue">
+                <v-col offset-lg="2" lg="8" md="12">
+                    <div>
+                        <v-text-field label="Pesquisa..." v-model="search" @keypress.enter="searchPlataforma"></v-text-field>
+                    </div>
+
+                </v-col>
             <v-col offset-lg="2" lg="8" md="12">
             <v-simple-table>
                 <thead>
@@ -66,20 +72,28 @@
             },
             listaPlataforma: [],
             indice: -1,
-            items: ['Pago', "Grátis"]
+            items: ['Pago', "Grátis"],
+            search: ""
+
 
         }),
         mounted(){
             this.getPlataforma();
         },
         methods: {
+            // MÉTODO GET
             async getPlataforma(){
                 const req = await fetch('http://localhost:3000/plataforma');
                 const data = await req.json();
                 this.listaPlataforma = data;
-                console.log(this.listaPlataforma)
-
             },
+            // MÉTODO SEARCH (PESQUISA)
+            async searchPlataforma(){
+                const req = await fetch('http://localhost:3000/plataforma?q='+this.search);
+                const data = await req.json();
+                this.listaPlataforma = data;
+            },
+            // LIMPA OS CAMPOS
             limpaPlataforma() {
                 this.plataforma = {
                     id: 0,
@@ -88,6 +102,7 @@
                 };
                 this.indice = -1;
             },
+            // MÉTODO QUE VAI SALVAR E ATUALIZAR 
             async salvarPlataforma() {
                                 
                 if(this.indice < 0){
@@ -122,15 +137,12 @@
                 this.getPlataforma();
                 this.limpaPlataforma();
             },
-
+            // MÉTODO QUE VAI ALTERAR I INDICE PARA A EDIÇÃO DO VALOR
             async alterarPlataforma(plat){
-
                 this.indice = plat.id;
                 this.plataforma = plat;
-
-
-                
             },
+            // MÉTODO QUE VAI REMOVER O OBJETO
             async removerPlataforma(indice){
                 const req = await fetch('http://localhost:3000/plataforma/'+indice,
                 {

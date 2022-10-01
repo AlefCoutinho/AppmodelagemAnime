@@ -16,6 +16,13 @@
             </v-col>
             </v-row>
             <v-row class="text-center lighten-4 blue">
+                <v-col offset-lg="2" lg="8" md="12">
+                    <div>
+                        <v-text-field label="Pesquisa..." v-model="search" @keypress.enter="searchCategoria"></v-text-field>
+                    </div>
+
+                </v-col>
+
             <v-col offset-lg="2" lg="8" md="12">
             <v-simple-table>
                 <thead>
@@ -59,7 +66,8 @@
                 nome: ""
             },
             listaCategoria: [],
-            indice: -1
+            indice: -1,
+            search: ""
 
         }),
         mounted(){
@@ -70,7 +78,11 @@
                 const req = await fetch('http://localhost:3000/categorias');
                 const data = await req.json();
                 this.listaCategoria = data;
-                console.log(this.listaCategoria)
+            },
+            async searchCategoria(){
+                const req = await fetch('http://localhost:3000/categorias?q='+this.search);
+                const data = await req.json();
+                this.listaCategoria = data;
 
             },
             limpaCategoria() {
