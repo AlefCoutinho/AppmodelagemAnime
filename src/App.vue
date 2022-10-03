@@ -9,19 +9,23 @@
     >
       <Navbar/>
     </v-app-bar>
+
     <!-- visão principal onde serão renderizadas as rotas -->
     <v-main>
       <router-view/>
     </v-main>
+    <Footer />
   </v-app>
+
 </template>
 
 <script>
   import Navbar from "./components/Header.vue"
-
+  import Footer from "./components/Footer.vue"
   export default {
     components:{
       Navbar,
+      Footer
     },
     name: 'App',
     data: () => ({
@@ -29,4 +33,3 @@
     }),
   };
 </script>
-  

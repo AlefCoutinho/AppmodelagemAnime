@@ -25,29 +25,23 @@
       <!-- adiciona os botões de navegação -->
       <v-btn to="/" text >
         <span class="mr-2">Início</span>
-        <v-icon>mdi-home</v-icon>
       </v-btn>
       <v-btn to="/anime" text >
-        <v-icon>mdi-plus</v-icon>
         <span class="mr-2">Anime</span>
       </v-btn>
       <v-btn to="/plataforma" text >
-        <v-icon>mdi-plus</v-icon>
         <span class="mr-2">Plataforma</span>
       </v-btn>
       <v-btn to="/categoria" text >
-        <v-icon>mdi-plus</v-icon>
         <span class="mr-2">Categoria</span>
       </v-btn>
       
       <v-btn to="/usuario" text >
-        <v-icon>mdi-plus</v-icon>
         <span class="mr-2">Usuário</span>
       </v-btn>
       
       <v-btn to="/about" text >
         <span class="mr-2">Sobre</span>
-        <v-icon>mdi-help</v-icon>
       </v-btn>
     </v-app-bar>
 </template>
