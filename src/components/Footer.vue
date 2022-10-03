@@ -8,8 +8,8 @@
       flat
       tile
     >
-      <v-card-title class="teal">
-        <strong class="subheading">Get connected with us on social networks!</strong>
+      <v-card-title class="primary">
+        <strong class="subheading">Nós siga no GitHub!</strong>
 
         <v-spacer></v-spacer>
 
@@ -27,7 +27,7 @@
       </v-card-title>
 
       <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        {{ new Date().getFullYear() }} — <strong>ES Dev</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -38,9 +38,11 @@
     data: () => ({
       icons: [
         'mdi-github',
-        'mdi-twitter',
-        'mdi-linkedin',
-        'mdi-instagram',
+        'mdi-github',
+        'mdi-github',
+        'mdi-github',
+        'mdi-github',
+        'mdi-github',
       ],
     }),
   }
