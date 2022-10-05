@@ -377,6 +377,7 @@ export default {
       this.getAnime();
       this.limpaAnime();
       this.dialog = false;
+      this.limpaAnime();
     },
 
     async alterarAnime(anime) {
