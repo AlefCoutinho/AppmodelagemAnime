@@ -75,6 +75,36 @@
       "statusDoAnime": "Em lançamento",
       "nota": "13",
       "id": 5
+    },
+    {
+      "nome": "",
+      "diretor": "",
+      "estudio": "",
+      "qtdtemporadas": "",
+      "sinopse": "",
+      "categorias": [],
+      "plataformas": [],
+      "dtlancamento": "",
+      "qtdEp": "",
+      "statusDoAnime": "",
+      "nota": "",
+      "id": 6
+    },
+    {
+      "nome": "",
+      "diretor": "",
+      "estudio": "",
+      "qtdtemporadas": "",
+      "sinopse": "",
+      "categorias": [
+        "Ação"
+      ],
+      "plataformas": [],
+      "dtlancamento": "",
+      "qtdEp": "",
+      "statusDoAnime": "",
+      "nota": "",
+      "id": 7
     }
   ],
   "plataforma": [
@@ -126,20 +156,8 @@
   ],
   "categorias": [
     {
-      "id": 1,
-      "nome": "Ação"
-    },
-    {
       "id": 2,
       "nome": "Artes Marciais"
-    },
-    {
-      "id": 3,
-      "nome": "Aventura"
-    },
-    {
-      "id": 4,
-      "nome": "Comédia"
     },
     {
       "id": 5,

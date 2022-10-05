@@ -224,11 +224,7 @@
                   <v-divider class="mx-4"></v-divider>
 
                   <v-card-actions>
-                    <v-btn-toggle
-                      center
-                      align="center"
-                      justify="center"
-                    >
+                    <v-btn-toggle center align="center" justify="center">
                       <v-btn
                         class="yellow darken white--text center"
                         @click="alterarAnime(anime)"
@@ -400,26 +396,24 @@ export default {
 </script>
 
 <style>
-  /* BARRA DE ROLAGEM */
-  div::-webkit-scrollbar {
-    width: 8px; /* width of the entire scrollbar */
-  }
+/* BARRA DE ROLAGEM */
+div::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
 
-  div::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255);        /* color of the tracking area */
-  }
+div::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255); /* color of the tracking area */
+}
 
-  div::-webkit-scrollbar-thumb{
-    background-color: #cf9e25;    /* color of the scroll thumb */
-    border-radius: 0 20px 0 20px;       /* roundness of the scroll thumb */
-    /*border: 3px solid #ffeb3b;  /*creates padding around scroll thumb*/
-    border: 1px solid #fde402;  /*creates padding around scroll thumb*/
-  }
-  div::-webkit-scrollbar-thumb:hover {
-    background-color: #fde402;    /* color of the scroll thumb */
-    border-radius: 0 20px 0 20px;       /* roundness of the scroll thumb */
-    /* border: 3px solid orange;  creates padding around scroll thumb */
-  }
-
-
+div::-webkit-scrollbar-thumb {
+  background-color: #cf9e25; /* color of the scroll thumb */
+  border-radius: 0 20px 0 20px; /* roundness of the scroll thumb */
+  /*border: 3px solid #ffeb3b;  /*creates padding around scroll thumb*/
+  border: 1px solid #fde402; /*creates padding around scroll thumb*/
+}
+div::-webkit-scrollbar-thumb:hover {
+  background-color: #fde402; /* color of the scroll thumb */
+  border-radius: 0 20px 0 20px; /* roundness of the scroll thumb */
+  /* border: 3px solid orange;  creates padding around scroll thumb */
+}
 </style>
