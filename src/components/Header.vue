@@ -1,8 +1,8 @@
 <template>
-    <v-app-bar app color="green darken-2">
-        <div class="d-flex align-center">
-            <!-- adiciona o logo vuetify -->
-            <!-- <v-img
+  <v-app-bar app color="green darken-2">
+    <div class="d-flex align-center">
+      <!-- adiciona o logo vuetify -->
+      <!-- <v-img
                 alt="LOLIZINHA"
                 class="shrink mr-12"
                 contain
@@ -10,9 +10,9 @@
                 transition="scale-transition"
                 width="40"
             /> -->
-            LOLIZINHA
-            <!-- adiciona o nome (imagem) vuetify -->
-            <!-- <v-img
+      LOLIZINHA
+      <!-- adiciona o nome (imagem) vuetify -->
+      <!-- <v-img
         alt="Vuetify Name"
         class="shrink mt-1 hidden-sm-and-down"
         contain
@@ -20,38 +20,56 @@
         src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
         width="100"
       /> -->
-        </div>
-        <!-- cria um espaço -->
-        <v-spacer></v-spacer>
-        <!-- adiciona os botões de navegação -->
-        <v-btn-toggle class="light-green">
-            <v-btn to="/" text>
+    </div>
+    <!-- cria um espaço -->
+    <v-spacer></v-spacer>
+    <div class="text-center" center>
+      <v-menu offset-x>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn color="primary" center dark v-bind="attrs" v-on="on"> Menu </v-btn>
+        </template>
+        <v-list>
+          <v-list-item>
+            <v-list-item-title>
+              <v-btn to="/" text>
                 <span class="mr-2">Início</span>
-            </v-btn>
-            <v-btn to="/anime" text>
+              </v-btn>
+            </v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>
+              <v-btn to="/anime" text>
                 <span class="mr-2">Anime</span>
-            </v-btn>
-            <v-btn to="/plataforma" text>
+              </v-btn>
+            </v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>
+              <v-btn to="/plataforma" text>
                 <span class="mr-2">Plataforma</span>
-            </v-btn>
-            <v-btn to="/categoria" text>
+              </v-btn>
+            </v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>
+              <v-btn to="/categoria" text>
                 <span class="mr-2">Categoria</span>
-            </v-btn>
-
-            <v-btn to="/usuario" text>
-                <span class="mr-2">Usuário</span>
-            </v-btn>
-
-            <v-btn to="/about" text>
-                <span class="mr-2">Sobre</span>
-            </v-btn>
-        </v-btn-toggle>
-    </v-app-bar>
+              </v-btn>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      <v-btn to="/about" color="alert" depressed center dark text>
+        <span class="mr-2">Sobre</span>
+      </v-btn>
+    </div>
+  </v-app-bar>
 </template>
 
 <script>
 export default {
-    name: "Navbar",
+  name: "Navbar",
+  data: () => ({}),
 };
 </script>
 

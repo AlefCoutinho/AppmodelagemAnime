@@ -9,25 +9,20 @@
   ],
   "anime": [
     {
-      "nome": "NARUTO",
-      "diretor": "ERIC",
-      "estudio": "FAMILIA DOURADO ",
-      "qtdtemporadas": 2,
-      "sinopse": "É ISSO MESMO",
-      "categorias": [
-        "Horror"
-      ],
-      "plataformas": [
-        "Netflix"
-      ],
-      "dtlancamento": "2022-09-01",
-      "qtdEp": "235",
-      "statusDoAnime": "Em lançamento",
-      "nota": "5",
-      "id": 1
+      "id": 1,
+      "anime": "",
+      "email": "",
+      "senha": ""
     },
     {
-      "nome": "eda",
+      "id": 2,
+      "anime": "",
+      "email": "",
+      "senha": "",
+      "nome": "NARUTINHO"
+    },
+    {
+      "nome": "",
       "diretor": "",
       "estudio": "",
       "qtdtemporadas": "",
@@ -38,7 +33,21 @@
       "qtdEp": "",
       "statusDoAnime": "",
       "nota": "",
-      "id": 2
+      "id": 3
+    },
+    {
+      "nome": "",
+      "diretor": "",
+      "estudio": "",
+      "qtdtemporadas": 4,
+      "sinopse": "",
+      "categorias": [],
+      "plataformas": [],
+      "dtlancamento": "",
+      "qtdEp": "",
+      "statusDoAnime": "",
+      "nota": "",
+      "id": 4
     }
   ],
   "plataforma": [

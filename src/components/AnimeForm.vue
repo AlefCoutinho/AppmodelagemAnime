@@ -3,34 +3,36 @@
     <div class="text-center">
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            rounded
-            elevation="2"
-            color="yellow darken-2"
-            dark
-            large
-            class="text-center black--text"
-            v-bind="attrs"
-            v-on="on"
-          >
-            Cadastrar Anime
-          </v-btn>
-          <v-btn
-            rounded
-            elevation="2"
-            color="yellow darken-2"
-            dark
-            large
-            class="text-center black--text"
-            @click="hidden = !hidden"
-          >
-            {{ hidden ? "Exibir Cadastrados" : "Ocultar" }}
-          </v-btn>
+          <v-btn-toggle v-model="toggle_exclusive" mandatory>
+            <v-btn
+              rounded
+              elevation="2"
+              color="yellow darken-2"
+              dark
+              large
+              class="text-center black--text"
+              v-bind="attrs"
+              v-on="on"
+            >
+              Novo Anime
+            </v-btn>
+            <v-btn
+              rounded
+              elevation="2"
+              color="yellow darken-2"
+              dark
+              large
+              class="text-center black--text"
+              @click="hidden = !hidden"
+            >
+              {{ hidden ? "Cadastrados" : "Ocultar" }}
+            </v-btn>
+          </v-btn-toggle>
         </template>
 
         <v-card>
           <v-card-title class="justify-center text-h5 white--text green darken-4">
-            Anime
+            Informações do Anime
           </v-card-title>
 
           <v-card-text class="light-green lighten-5">
@@ -196,18 +198,24 @@
               <td class="text-left">{{ anime.nota }}</td>
 
               <td>
-                <v-btn-toggle v-model="toggle_multiple" center>
+                <v-btn-toggle
+                  v-model="toggle_multiple"
+                  center
+                  align="center"
+                  justify="center"
+                >
                   <v-btn
-                    class="orange darken-4 white--text center"
+                    class="yellow darken-2 white--text center"
                     @click="alterarAnime(anime)"
                   >
-                    <v-icon left>mdi-wrench</v-icon>
+                    <v-icon center>mdi-wrench</v-icon>
                   </v-btn>
                   <v-btn
-                    class="red darken-4 white--text center"
+                    class="red darken-4 center"
                     @click="removerAnime(anime.id)"
+                    center
                   >
-                    <v-icon dark left>mdi-cancel</v-icon>
+                    <v-icon center>mdi-cancel</v-icon>
                   </v-btn>
                 </v-btn-toggle>
               </td>
@@ -223,7 +231,7 @@
 export default {
   name: "animeForm",
   data: () => ({
-    hidden: false,
+    hidden: true,
     dialog: false,
     valid: true,
     anime: {
