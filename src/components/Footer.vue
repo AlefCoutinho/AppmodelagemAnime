@@ -7,7 +7,7 @@
           
           <!-- <v-spacer></v-spacer> -->
 
-          <a v-for="(dev_p, i) in github" :key="i" :href="dev_p.link" class="mm" dark icon>
+          <a v-for="(dev_p, i) in github" target="_blank" :key="i" :href="dev_p.link" class="mm" dark icon>
             <v-icon size="24px">
               mdi-github
             </v-icon>
