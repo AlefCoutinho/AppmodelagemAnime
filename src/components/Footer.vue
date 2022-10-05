@@ -4,11 +4,12 @@
     padless
   >
     <v-card
-      class="flex"
+      
+      class="flex green darken-4"
       flat
       tile
     >
-      <v-card-title class="primary">
+      <v-card-title class="green darken-2">
         <strong class="subheading">Nós siga no GitHub!</strong>
 
         <v-spacer></v-spacer>
