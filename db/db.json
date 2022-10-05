@@ -12,7 +12,16 @@
       "id": 1,
       "anime": "",
       "email": "",
-      "senha": ""
+      "senha": "",
+      "nome": "GOMU GOMU NO COXINHA",
+      "diretor": "COXNHA",
+      "estudio": "EASD",
+      "qtdtemporadas": 1,
+      "sinopse": "EADSA",
+      "dtlancamento": "2022-10-07",
+      "qtdEp": "",
+      "statusDoAnime": "Em lançamento",
+      "nota": "1231"
     },
     {
       "id": 2,
@@ -48,6 +57,39 @@
       "statusDoAnime": "",
       "nota": "",
       "id": 4
+    },
+    {
+      "nome": "",
+      "diretor": "",
+      "estudio": "",
+      "qtdtemporadas": "",
+      "sinopse": "",
+      "categorias": [],
+      "plataformas": [],
+      "dtlancamento": "",
+      "qtdEp": "",
+      "statusDoAnime": "",
+      "nota": "",
+      "id": 5
+    },
+    {
+      "nome": "EA",
+      "diretor": "DS",
+      "estudio": "ERA",
+      "qtdtemporadas": 2,
+      "sinopse": "EADSA",
+      "categorias": [
+        "Artes Marciais",
+        "Comédia"
+      ],
+      "plataformas": [
+        "Crunchyroll"
+      ],
+      "dtlancamento": "1231-03-21",
+      "qtdEp": "12321",
+      "statusDoAnime": "Em lançamento",
+      "nota": "213",
+      "id": 6
     }
   ],
   "plataforma": [

@@ -1,10 +1,11 @@
 <template>
   <v-container>
-    <div class="text-center">
+    <div class="text-center" center>
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn-toggle v-model="toggle_exclusive" mandatory>
+          <v-btn-toggle v-model="toggle_exclusive" mandatory center>
             <v-btn
+              center
               rounded
               elevation="2"
               color="yellow darken-2"
@@ -16,7 +17,10 @@
             >
               Novo Anime
             </v-btn>
+            <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
             <v-btn
+              center
               rounded
               elevation="2"
               color="yellow darken-2"
@@ -34,9 +38,9 @@
           <v-card-title class="justify-center text-h5 white--text green darken-4">
             Informações do Anime
           </v-card-title>
-
-          <v-card-text class="light-green lighten-5">
-            <v-row class="text-center white rounded-0">
+          <v-spacer></v-spacer>
+          <v-card-text class="lig ht-green lighten-5">
+            <v-row class="text-center green lighten-5 rounded-0">
               <v-col offset-lg="2" lg="8" md="12">
                 <v-form v-model="valid">
                   <v-row>

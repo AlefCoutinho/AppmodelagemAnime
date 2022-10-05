@@ -26,7 +26,9 @@
     <div class="text-center" center>
       <v-menu offset-x>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="primary" center dark v-bind="attrs" v-on="on"> Menu </v-btn>
+          <v-btn color="green darken-4" center dark v-bind="attrs" v-on="on">
+            Menu
+          </v-btn>
         </template>
         <v-list>
           <v-list-item>
@@ -59,9 +61,8 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-btn to="/about" color="alert" depressed center dark text>
-        <span class="mr-2">Sobre</span>
-      </v-btn>
+      |
+      <v-btn to="/about" depressed color="green darken-4"> Sobre </v-btn>
     </div>
   </v-app-bar>
 </template>
