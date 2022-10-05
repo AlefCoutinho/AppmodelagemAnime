@@ -9,49 +9,47 @@
   ],
   "anime": [
     {
-      "id": 1,
-      "anime": "",
-      "email": "",
-      "senha": "",
-      "nome": "GOMU GOMU NO COXINHA",
-      "diretor": "COXNHA",
-      "estudio": "EASD",
-      "qtdtemporadas": 1,
-      "sinopse": "EADSA",
-      "dtlancamento": "2022-10-07",
+      "nome": "Naruto",
+      "diretor": "Masashi Oda",
+      "estudio": "Pierrot",
+      "qtdtemporadas": 10,
+      "sinopse": "A série gira em torno das aventuras vividas por Naruto Uzumaki, um jovem órfão habitante da Aldeia da Folha que sonha em se tornar o quinto Hokage, o maior guerreiro e governante da vila. Ao se graduar como ninja, Naruto descobre que tem um demônio raposa selado dentro de si.",
+      "categorias": [
+        "Ação",
+        "Artes Marciais"
+      ],
+      "plataformas": [
+        "Amazon Prime Video"
+      ],
+      "dtlancamento": "",
       "qtdEp": "",
       "statusDoAnime": "Em lançamento",
-      "nota": "1231"
+      "nota": "123",
+      "id": 1
     },
     {
-      "id": 2,
+      "id": 3,
       "anime": "",
       "email": "",
       "senha": "",
-      "nome": "NARUTINHO"
+      "nome": "easdsadsadsadsadas",
+      "diretor": "easda",
+      "sinopse": "easdsadsa"
     },
     {
-      "nome": "",
+      "nome": "COXINHA GOD",
       "diretor": "",
       "estudio": "",
       "qtdtemporadas": "",
-      "sinopse": "",
-      "categorias": [],
-      "plataformas": [],
-      "dtlancamento": "",
-      "qtdEp": "",
-      "statusDoAnime": "",
-      "nota": "",
-      "id": 3
-    },
-    {
-      "nome": "",
-      "diretor": "",
-      "estudio": "",
-      "qtdtemporadas": 4,
-      "sinopse": "",
-      "categorias": [],
-      "plataformas": [],
+      "sinopse": "#NERFA AOKYN",
+      "categorias": [
+        "Ação",
+        "Artes Marciais"
+      ],
+      "plataformas": [
+        "Funimation",
+        "Netflix"
+      ],
       "dtlancamento": "",
       "qtdEp": "",
       "statusDoAnime": "",
@@ -59,37 +57,24 @@
       "id": 4
     },
     {
-      "nome": "",
-      "diretor": "",
-      "estudio": "",
-      "qtdtemporadas": "",
-      "sinopse": "",
-      "categorias": [],
-      "plataformas": [],
-      "dtlancamento": "",
-      "qtdEp": "",
-      "statusDoAnime": "",
-      "nota": "",
-      "id": 5
-    },
-    {
-      "nome": "EA",
-      "diretor": "DS",
-      "estudio": "ERA",
-      "qtdtemporadas": 2,
-      "sinopse": "EADSA",
+      "nome": "BORUPIECE",
+      "diretor": "Masashi Kishifote",
+      "estudio": "Palhacinho",
+      "qtdtemporadas": 19,
+      "sinopse": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
       "categorias": [
         "Artes Marciais",
-        "Comédia"
+        "Harém"
       ],
       "plataformas": [
-        "Crunchyroll"
+        "Amazon Prime Video",
+        "Netflix"
       ],
-      "dtlancamento": "1231-03-21",
-      "qtdEp": "12321",
+      "dtlancamento": "2022-10-26",
+      "qtdEp": "1231",
       "statusDoAnime": "Em lançamento",
-      "nota": "213",
-      "id": 6
+      "nota": "13",
+      "id": 5
     }
   ],
   "plataforma": [

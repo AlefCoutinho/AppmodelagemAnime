@@ -35,12 +35,16 @@
         </template>
 
         <v-card>
-          <v-card-title class="justify-center text-h5 white--text green darken-4">
+          <v-card-title
+            class="justify-center text-h5 black--text yellow darken-2 rounded"
+            rounded
+          >
             Informações do Anime
           </v-card-title>
-          <v-spacer></v-spacer>
-          <v-card-text class="lig ht-green lighten-5">
-            <v-row class="text-center green lighten-5 rounded-0">
+
+          <v-card-text class="green lighten-5">
+            <v-spacer>.</v-spacer>
+            <v-row class="text-center green lighten-5" rounded>
               <v-col offset-lg="2" lg="8" md="12">
                 <v-form v-model="valid">
                   <v-row>
@@ -168,62 +172,86 @@
         </v-card>
       </v-dialog>
     </div>
+    <v-space>.</v-space>
 
     <v-row class="text-center" v-show="!hidden">
       <v-col offset-lg="2" lg="8" md="12">
-        <v-simple-table>
+        <v-simple-table rounded-pill>
           <thead>
             <tr>
-              <th class="text-left" style="width: 60%">Nome do anime</th>
-              <th class="text-left">Diretor</th>
-              <th class="text-left">Quantidade de temporadas</th>
-              <th class="text-left">Categoria</th>
-              <th class="text-left">Sinopse</th>
-              <th class="text-left">Categoria</th>
-              <th class="text-left">Plataforma</th>
-              <th class="text-left">Data de lançamento</th>
-              <th class="text-left">Quantidade de episódios</th>
-              <th class="text-left">Status do Anime</th>
-              <th class="text-left">Nota</th>
+              <th v-for="(anime, indice) in listaAnime" :key="indice">
+                <v-card :loading="loading" class="mx-auto" max-width="350">
+                  <template slot="progress">
+                    <v-progress-linear
+                      color="deep-purple"
+                      height="10"
+                      indeterminate
+                    ></v-progress-linear>
+                  </template>
+
+                  <v-img
+                    height="250"
+                    src="https://i.pinimg.com/736x/58/53/83/585383da22c40c31cea4d9181df39ff1.jpg"
+                  ></v-img>
+
+                  <v-card-title>{{ anime.nome }}</v-card-title>
+
+                  <v-card-text>
+                    <v-row align="center" class="mx-0"> </v-row>
+
+                    <div class="my-4 text-subtitle-1">
+                      {{ anime.estudio }} {{ anime.statusDoAnime }}
+                      {{ anime.dtlancamento }} |
+                    </div>
+                    <div>
+                      {{ anime.sinopse }}
+                    </div>
+                  </v-card-text>
+                  <v-divider class="mx-4"></v-divider>
+                  <v-card-text>
+                    <v-row align="center" class="mx-0"> </v-row>
+
+                    <div class="my-4 text-subtitle-1">
+                      {{ anime.diretor }}
+                    </div>
+                    <div>
+                      Disponível na {{ anime.plataformas }} <br />
+                      Com {{ anime.qtdtemporadas }} temporadas e {{ anime.qtdEp }} de
+                      episódios.<br />Categorias: {{ anime.categorias }} <br />Avaliação:
+                    </div>
+                  </v-card-text>
+
+                  <v-divider class="mx-4"></v-divider>
+
+                  <v-card-actions>
+                    <v-btn-toggle
+                      v-model="toggle_multiple"
+                      center
+                      align="center"
+                      justify="center"
+                    >
+                      <v-btn
+                        class="yellow darken white--text center"
+                        @click="alterarAnime(anime)"
+                      >
+                        <v-icon center>mdi-wrench</v-icon>
+                      </v-btn>
+
+                      <v-btn
+                        class="yellow darken-2 center"
+                        @click="removerAnime(anime.id)"
+                        center
+                      >
+                        <v-icon center>mdi-cancel</v-icon>
+                      </v-btn>
+                    </v-btn-toggle>
+                  </v-card-actions>
+                </v-card>
+              </th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(anime, indice) in listaAnime" :key="indice">
-              <td class="text-left">{{ anime.nome }}</td>
-              <td class="text-left">{{ anime.diretor }}</td>
-              <td class="text-left">{{ anime.estudio }}</td>
-              <td class="text-left">{{ anime.qtdtemporadas }}</td>
-              <td class="text-left">{{ anime.sinopse }}</td>
-              <td class="text-left">{{ anime.categorias }}</td>
-              <td class="text-left">{{ anime.plataformas }}</td>
-              <td class="text-left">{{ anime.dtlancamento }}</td>
-              <td class="text-left">{{ anime.qtdEp }}</td>
-              <td class="text-left">{{ anime.statusDoAnime }}</td>
-              <td class="text-left">{{ anime.nota }}</td>
-
-              <td>
-                <v-btn-toggle
-                  v-model="toggle_multiple"
-                  center
-                  align="center"
-                  justify="center"
-                >
-                  <v-btn
-                    class="yellow darken-2 white--text center"
-                    @click="alterarAnime(anime)"
-                  >
-                    <v-icon center>mdi-wrench</v-icon>
-                  </v-btn>
-                  <v-btn
-                    class="red darken-4 center"
-                    @click="removerAnime(anime.id)"
-                    center
-                  >
-                    <v-icon center>mdi-cancel</v-icon>
-                  </v-btn>
-                </v-btn-toggle>
-              </td>
-            </tr>
+            <tr></tr>
           </tbody>
         </v-simple-table>
       </v-col>
