@@ -25,6 +25,20 @@
       "statusDoAnime": "Em lançamento",
       "nota": "5",
       "id": 1
+    },
+    {
+      "nome": "eda",
+      "diretor": "",
+      "estudio": "",
+      "qtdtemporadas": "",
+      "sinopse": "",
+      "categorias": [],
+      "plataformas": [],
+      "dtlancamento": "",
+      "qtdEp": "",
+      "statusDoAnime": "",
+      "nota": "",
+      "id": 2
     }
   ],
   "plataforma": [
