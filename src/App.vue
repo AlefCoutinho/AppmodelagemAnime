@@ -14,7 +14,8 @@
     <v-main>
       <router-view/>
     </v-main>
-    <Footer />
+    <Footer>
+    </Footer>
   </v-app>
 
 </template>

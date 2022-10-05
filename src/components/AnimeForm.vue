@@ -3,7 +3,7 @@
     <div class="text-center" center>
       <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn-toggle v-model="toggle_exclusive" mandatory center>
+          <v-btn-toggle mandatory center>
             <v-btn
               center
               rounded
@@ -115,7 +115,7 @@
                       <ul>
                         <li v-for="(plat, indice) in anime.plataformas" :key="indice">
                           {{ plat }}
-                          <v-btn-toggle v-model="toggle_exclusive">
+                          <v-btn-toggle>
                             <v-btn
                               class="red darken-4 white--text"
                               @click="removePlataforma(indice)"
@@ -172,7 +172,7 @@
         </v-card>
       </v-dialog>
     </div>
-    <v-space>.</v-space>
+    <!-- <v-space>.</v-space> -->
 
     <v-row class="text-center" v-show="!hidden">
       <v-col offset-lg="2" lg="8" md="12">
@@ -180,7 +180,7 @@
           <thead>
             <tr>
               <th v-for="(anime, indice) in listaAnime" :key="indice">
-                <v-card :loading="loading" class="mx-auto" max-width="350">
+                <v-card class="mx-auto" max-width="350">
                   <template slot="progress">
                     <v-progress-linear
                       color="deep-purple"
@@ -225,7 +225,6 @@
 
                   <v-card-actions>
                     <v-btn-toggle
-                      v-model="toggle_multiple"
                       center
                       align="center"
                       justify="center"
