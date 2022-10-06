@@ -9,6 +9,7 @@
   ],
   "anime": [
     {
+      "imgcapa": "https://criticalhits.com.br/wp-content/uploads/2022/06/naruto-uzumaki_qabz-scaled.jpg",
       "nome": "Naruto",
       "diretor": "Masashi Oda",
       "estudio": "Pierrote",
@@ -29,14 +30,16 @@
     },
     {
       "id": 3,
+      "imgcapa": "https://i0.wp.com/www.jbox.com.br/wp/wp-content/uploads/2021/03/my-hero-academia-protagonistas-destacada.jpg?fit=774%2C489&quality=99&strip=all&ssl=1",
       "anime": "",
       "email": "",
       "senha": "",
-      "nome": "easdsadsadsadsadas",
+      "nome": "Boku do Hero",
       "diretor": "easda",
       "sinopse": "easdsadsa"
     },
     {
+      "imgcapa": "https://pubimg.band.uol.com.br/files/2c0933a3fb3b6946e074.png",
       "nome": "COXINHA GOD",
       "diretor": "",
       "estudio": "",
@@ -57,7 +60,8 @@
       "id": 4
     },
     {
-      "nome": "BORUPIECE",
+      "imgcapa": "https://uploads.jovemnerd.com.br/wp-content/uploads/2022/06/manga_de_one_piece__22ly11r-1210x544.jpg",
+      "nome": "One Piece",
       "diretor": "Masashi Kishifote",
       "estudio": "Palhacinho",
       "qtdtemporadas": 19,
@@ -75,36 +79,6 @@
       "statusDoAnime": "Em lançamento",
       "nota": "13",
       "id": 5
-    },
-    {
-      "nome": "",
-      "diretor": "",
-      "estudio": "",
-      "qtdtemporadas": "",
-      "sinopse": "",
-      "categorias": [],
-      "plataformas": [],
-      "dtlancamento": "",
-      "qtdEp": "",
-      "statusDoAnime": "",
-      "nota": "",
-      "id": 6
-    },
-    {
-      "nome": "",
-      "diretor": "",
-      "estudio": "",
-      "qtdtemporadas": "",
-      "sinopse": "",
-      "categorias": [
-        "Ação"
-      ],
-      "plataformas": [],
-      "dtlancamento": "",
-      "qtdEp": "",
-      "statusDoAnime": "",
-      "nota": "",
-      "id": 7
     }
   ],
   "plataforma": [

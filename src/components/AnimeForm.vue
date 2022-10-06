@@ -65,6 +65,13 @@
                         label="Quantidade de temporadas"
                       >
                       </v-text-field>
+
+                      <v-text-field
+                        v-model="anime.imgcapa"
+                        type="url"
+                        label="Url da Imagem"
+                      >
+                      </v-text-field>
                       
                       <v-textarea
                         v-model="anime.sinopse"
@@ -182,14 +189,15 @@
       </v-dialog>
     </div>
     <!-- <v-space>.</v-space> -->
-
+    <br>
+    <br>
+    <!-- bloco do código para a exibição dos animes -->
     <v-row class="text-center" v-show="!hidden">
-      <v-col offset-lg="2" lg="8" md="12">
-        <v-simple-table rounded-pill>
-          <thead>
-            <tr>
-              <th v-for="(anime, indice) in listaAnime" :key="indice">
-                <v-card class="mx-auto" max-width="350">
+      <v-col offset-lg="1" lg="10" ms="12">
+              <div class="bloco--anime" v-for="(anime, indice) in listaAnime" :key="indice">
+                
+                
+                <v-card class="mx-auto">
                   <template slot="progress">
                     <v-progress-linear
                       color="deep-purple"
@@ -198,10 +206,31 @@
                     ></v-progress-linear>
                   </template>
 
+                  <!-- bloco do código referente a imagem -->
                   <v-img
-                    height="250"
-                    src="https://i.pinimg.com/736x/58/53/83/585383da22c40c31cea4d9181df39ff1.jpg"
-                  ></v-img>
+                    height="150"
+                    :src="anime.imgcapa"
+                    >
+                    <!-- src="https://i.pinimg.com/736x/58/53/83/585383da22c40c31cea4d9181df39ff1.jpg" -->
+                    <v-card-actions>
+                      <v-btn-toggle center align="center" justify="center">
+                        <v-btn
+                          class="yellow darken white--text center"
+                          @click="alterarAnime(anime)"
+                        >
+                          <v-icon center>mdi-wrench</v-icon>
+                        </v-btn>
+
+                        <v-btn
+                          class="yellow darken-2 center"
+                          @click="removerAnime(anime.id)"
+                          center
+                        >
+                          <v-icon center>mdi-cancel</v-icon>
+                        </v-btn>
+                      </v-btn-toggle>
+                    </v-card-actions>
+                  </v-img>
 
                   <v-card-title>{{ anime.nome }}</v-card-title>
 
@@ -213,7 +242,7 @@
                       {{ anime.dtlancamento }} |
                     </div>
                     <div>
-                      {{ anime.sinopse }}
+                      {{ caracteresReduzido(anime.sinopse, 70) }}
                     </div>
                   </v-card-text>
                   <v-divider class="mx-4"></v-divider>
@@ -224,40 +253,15 @@
                       {{ anime.diretor }}
                     </div>
                     <div>
-                      Disponível na {{ anime.plataformas }} <br />
+                      Disponível: <strong>{{ converteListaString(anime.plataformas) }}</strong> <br />
                       Com {{ anime.qtdtemporadas }} temporadas e {{ anime.qtdEp }} de
-                      episódios.<br />Categorias: {{ anime.categorias }} <br />Avaliação:
+                      episódios.<br />Categorias: <strong>{{ converteListaString(anime.categorias) }}</strong> <br />Avaliação:
                     </div>
                   </v-card-text>
 
-                  <v-divider class="mx-4"></v-divider>
-
-                  <v-card-actions>
-                    <v-btn-toggle center align="center" justify="center">
-                      <v-btn
-                        class="yellow darken white--text center"
-                        @click="alterarAnime(anime)"
-                      >
-                        <v-icon center>mdi-wrench</v-icon>
-                      </v-btn>
-
-                      <v-btn
-                        class="yellow darken-2 center"
-                        @click="removerAnime(anime.id)"
-                        center
-                      >
-                        <v-icon center>mdi-cancel</v-icon>
-                      </v-btn>
-                    </v-btn-toggle>
-                  </v-card-actions>
                 </v-card>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr></tr>
-          </tbody>
-        </v-simple-table>
+                
+              </div>
       </v-col>
     </v-row>
   </v-container>
@@ -282,6 +286,7 @@ export default {
       qtdEp: "",
       statusDoAnime: "",
       nota: "",
+      imgcapa: "",
     },
     errors: "",
     addCategoria: "",
@@ -306,6 +311,27 @@ export default {
       } else {
         this.errors = "Não deve repetir a mesma categoria";
       }
+    },
+    // função que limitar os caracteres
+    caracteresReduzido(texto, qtd){
+      
+       let lista = texto.slice(0,qtd);
+       lista += "...";
+       return lista;
+    },
+    converteListaString(lista){
+      let string = "";
+      if(lista?.length > 0){
+        for(let i =0 ; lista?.length > i ; i++){
+          string += lista[i];
+ 
+          if(lista?.length - 1 == i ) string += "."
+          else string += ", ";
+        }
+      }
+      
+      return string;
+
     },
     removeCategoria(indice) {
       this.anime.categorias.splice(indice, 1);
@@ -357,6 +383,7 @@ export default {
         qtdEp: "",
         statusDoAnime: "",
         nota: "",
+        imgcapa: ""
       };
       this.indice = -1;
     },
@@ -431,5 +458,30 @@ div::-webkit-scrollbar-thumb:hover {
   background-color: #fde402; /* color of the scroll thumb */
   border-radius: 0 20px 0 20px; /* roundness of the scroll thumb */
   /* border: 3px solid orange;  creates padding around scroll thumb */
+}
+.bloco--anime{
+  display: block;
+  max-height: 500px;
+  min-height: 500px;
+  width: 33.3334%;
+  float: left;
+  margin-bottom: 10px;
+}
+.bloco--anime .v-card__actions {
+  /* display: flex !important; */
+  justify-content: flex-end;
+}
+.bloco--anime .v-card{
+  height: 500px;
+  max-width: 90%;
+  
+}
+
+@media  (max-width: 768px) {
+  .bloco--anime{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
 }
 </style>
