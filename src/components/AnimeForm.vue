@@ -30,7 +30,7 @@
               class="text-center black--text"
               @click="hidden = !hidden"
             >
-              {{ hidden ? "Cadastrados" : "Ocultar" }}
+              {{ hidden ? "Animes" : "Ocultar" }}
             </v-btn>
           </v-btn-toggle>
         </template>
