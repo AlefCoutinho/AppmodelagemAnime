@@ -9,22 +9,102 @@
   ],
   "anime": [
     {
-      "nome": "NARUTO",
-      "diretor": "ERIC",
-      "estudio": "FAMILIA DOURADO ",
-      "qtdtemporadas": 2,
-      "sinopse": "É ISSO MESMO",
+      "nome": "Naruto",
+      "diretor": "Masashi Oda",
+      "estudio": "Pierrote",
+      "qtdtemporadas": 10,
+      "sinopse": "A série gira em torno das aventuras vividas por Naruto Uzumaki, um jovem órfão habitante da Aldeia da Folha que sonha em se tornar o quinto Hokage, o maior guerreiro e governante da vila. Ao se graduar como ninja, Naruto descobre que tem um demônio raposa selado dentro de si.",
       "categorias": [
-        "Horror"
+        "Ação",
+        "Artes Marciais"
       ],
       "plataformas": [
+        "Amazon Prime Video"
+      ],
+      "dtlancamento": "",
+      "qtdEp": "",
+      "statusDoAnime": "Em lançamento",
+      "nota": "123",
+      "id": 1
+    },
+    {
+      "id": 3,
+      "anime": "",
+      "email": "",
+      "senha": "",
+      "nome": "easdsadsadsadsadas",
+      "diretor": "easda",
+      "sinopse": "easdsadsa"
+    },
+    {
+      "nome": "COXINHA GOD",
+      "diretor": "",
+      "estudio": "",
+      "qtdtemporadas": "",
+      "sinopse": "#NERFA AOKYN",
+      "categorias": [
+        "Ação",
+        "Artes Marciais"
+      ],
+      "plataformas": [
+        "Funimation",
         "Netflix"
       ],
-      "dtlancamento": "2022-09-01",
-      "qtdEp": "235",
+      "dtlancamento": "",
+      "qtdEp": "",
+      "statusDoAnime": "",
+      "nota": "",
+      "id": 4
+    },
+    {
+      "nome": "BORUPIECE",
+      "diretor": "Masashi Kishifote",
+      "estudio": "Palhacinho",
+      "qtdtemporadas": 19,
+      "sinopse": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.",
+      "categorias": [
+        "Artes Marciais",
+        "Harém"
+      ],
+      "plataformas": [
+        "Amazon Prime Video",
+        "Netflix"
+      ],
+      "dtlancamento": "2022-10-26",
+      "qtdEp": "1231",
       "statusDoAnime": "Em lançamento",
-      "nota": "5",
-      "id": 1
+      "nota": "13",
+      "id": 5
+    },
+    {
+      "nome": "",
+      "diretor": "",
+      "estudio": "",
+      "qtdtemporadas": "",
+      "sinopse": "",
+      "categorias": [],
+      "plataformas": [],
+      "dtlancamento": "",
+      "qtdEp": "",
+      "statusDoAnime": "",
+      "nota": "",
+      "id": 6
+    },
+    {
+      "nome": "",
+      "diretor": "",
+      "estudio": "",
+      "qtdtemporadas": "",
+      "sinopse": "",
+      "categorias": [
+        "Ação"
+      ],
+      "plataformas": [],
+      "dtlancamento": "",
+      "qtdEp": "",
+      "statusDoAnime": "",
+      "nota": "",
+      "id": 7
     }
   ],
   "plataforma": [
@@ -72,24 +152,17 @@
       "id": 9,
       "plataforma": "YouTube",
       "tipoServico": "Grátis"
+    },
+    {
+      "plataforma": "RENATO",
+      "tipoServico": "Pago",
+      "id": 10
     }
   ],
   "categorias": [
     {
-      "id": 1,
-      "nome": "Ação"
-    },
-    {
       "id": 2,
       "nome": "Artes Marciais"
-    },
-    {
-      "id": 3,
-      "nome": "Aventura"
-    },
-    {
-      "id": 4,
-      "nome": "Comédia"
     },
     {
       "id": 5,
