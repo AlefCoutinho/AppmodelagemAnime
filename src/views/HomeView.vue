@@ -21,9 +21,6 @@
           </v-row>
         </v-sheet></v-carousel-item>
   </v-carousel>
-  <div class="about">
-    <h1>About</h1>
-  </div>
 </template>
 
 <script>
