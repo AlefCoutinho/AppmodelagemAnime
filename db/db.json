@@ -126,6 +126,11 @@
       "id": 9,
       "plataforma": "YouTube",
       "tipoServico": "Grátis"
+    },
+    {
+      "plataforma": "RENATO",
+      "tipoServico": "Pago",
+      "id": 10
     }
   ],
   "categorias": [
