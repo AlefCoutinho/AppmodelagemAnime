@@ -24,7 +24,12 @@
             <v-row class="text-center lighten-4 blue">
                 <v-col offset-lg="2" lg="8" md="12">
                     <div>
-                        <v-text-field label="Pesquisa..." v-model="search" @keypress.enter="searchPlataforma"></v-text-field>
+                        <v-text-field 
+                            label="Pesquisa..." 
+                            v-model="search" 
+                            @keypress.enter="searchPlataforma"
+                            @keyup="searchPlataforma">
+                        </v-text-field>
                     </div>
 
                 </v-col>

@@ -191,6 +191,18 @@
     <!-- <v-space>.</v-space> -->
     <br>
     <br>
+    <v-row v-show="!hidden">
+      <v-col offset-lg="2" lg="8" md="12">
+          <div>
+            <v-text-field
+              label="Pesquisa..."
+              v-model="search"
+              @keypress.enter="searchAnime"
+              @keyup="searchAnime"
+            ></v-text-field>
+          </div>
+      </v-col>
+    </v-row>
     <!-- bloco do código para a exibição dos animes -->
     <v-row class="text-center" v-show="!hidden">
       <v-col offset-lg="1" lg="10" ms="12">
@@ -304,6 +316,11 @@ export default {
     this.getPlataformas();
   },
   methods: {
+    async searchAnime() {
+      const req = await fetch("http://localhost:3000/anime?q=" + this.search);
+      const data = await req.json();
+      this.listaAnime = data;
+    },
     setCategoria() {
       if (!this.anime.categorias.includes(this.addCategoria) && this.addCategoria != "") {
         this.anime.categorias.push(this.addCategoria);

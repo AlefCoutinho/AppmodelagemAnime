@@ -87,10 +87,11 @@
               label="Pesquisa..."
               v-model="search"
               @keypress.enter="searchCategoria"
+              @keyup="searchCategoria"
             ></v-text-field>
           </div>
       </v-col>
-      </v-row>
+    </v-row>
 
     <v-row v-show="!hidden">
       <v-col offset-lg="2" lg="8" md="12">
