@@ -1,10 +1,11 @@
 <template>
   <v-container>
     <div class="text-center" center>
-      <v-dialog v-model="dialog" width="500">
+      <v-dialog v-model="dialog" width="650">
         <template v-slot:activator="{ on, attrs }">
           <v-btn-toggle mandatory center>
             <v-btn
+              @click="limpaAnime"
               center
               rounded
               elevation="2"
@@ -58,12 +59,13 @@
                         label="Estudio"
                         v-model="anime.estudio"
                       ></v-text-field>
-                      <v-select
+                      <v-text-field
                         v-model="anime.qtdtemporadas"
-                        :items="itemsQtdTemp"
+                        type="number"
                         label="Quantidade de temporadas"
                       >
-                      </v-select>
+                      </v-text-field>
+                      
                       <v-textarea
                         v-model="anime.sinopse"
                         label="Sinopse"
@@ -81,25 +83,28 @@
                         <v-icon>mdi-plus</v-icon>
                         <span class="mr-2">Categoria</span>
                       </v-btn>
-                      <ul>
-                        <li
+                      <table style="margin:0 auto">
+                        <tr 
                           v-for="(cat, indice) in anime.categorias"
                           :key="indice"
                           class="text-left"
                         >
-                          {{ cat }}
-                          <v-btn-toggle v-model="toggle_none" rounded>
-                            <v-btn
-                              class="red darken-1 white--text small"
-                              @click="removeCategoria(indice)"
-                            >
-                              <v-icon dark center>mdi-cancel</v-icon></v-btn
-                            >
-                          </v-btn-toggle>
-                        </li>
+                          <td>{{ cat }}</td>
+                          <td style="padding-left: 10px">
+                            <v-btn-toggle rounded>
+                              <v-btn
+                                class="red darken-1 white--text small"
+                                @click="removeCategoria(indice)"
+                              >
+                                <v-icon dark center>mdi-cancel</v-icon></v-btn
+                              >
+                            </v-btn-toggle>
+                          </td>
+                          
+                        </tr>
 
                         <p></p>
-                      </ul>
+                      </table>
 
                       <v-select
                         v-model="addPlataforma"
@@ -112,19 +117,23 @@
                         <span class="mr-2">Plataforma</span>
                       </v-btn>
 
-                      <ul>
-                        <li v-for="(plat, indice) in anime.plataformas" :key="indice">
-                          {{ plat }}
-                          <v-btn-toggle>
-                            <v-btn
-                              class="red darken-4 white--text"
-                              @click="removePlataforma(indice)"
-                            >
-                              <v-icon dark center>mdi-cancel </v-icon></v-btn
-                            >
-                          </v-btn-toggle>
-                        </li>
-                      </ul>
+                      <table style="margin:0 auto">
+                        <tr v-for="(plat, indice) in anime.plataformas" :key="indice">
+                          <td>
+                            {{ plat }}
+                          </td>
+                          <td  style="padding-left: 10px">
+                            <v-btn-toggle rounded>
+                              <v-btn
+                                class="red darken-1 white--text small"
+                                @click="removePlataforma(indice)"
+                              >
+                                <v-icon dark center>mdi-cancel </v-icon></v-btn
+                              >
+                            </v-btn-toggle>  
+                          </td>
+                        </tr>
+                      </table>
 
                       <v-text-field
                         type="date"
@@ -337,9 +346,17 @@ export default {
     limpaAnime() {
       this.anime = {
         id: 0,
-        anime: "",
-        email: "",
-        senha: "",
+        nome: "",
+        diretor: "",
+        estudio: "",
+        qtdtemporadas: "",
+        sinopse: "",
+        categorias: [],
+        plataformas: [],
+        dtlancamento: "",
+        qtdEp: "",
+        statusDoAnime: "",
+        nota: "",
       };
       this.indice = -1;
     },
@@ -372,7 +389,6 @@ export default {
       this.getAnime();
       this.limpaAnime();
       this.dialog = false;
-      this.limpaAnime();
     },
 
     async alterarAnime(anime) {

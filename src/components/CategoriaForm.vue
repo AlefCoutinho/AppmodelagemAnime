@@ -5,7 +5,8 @@
         <template v-slot:activator="{ on, attrs }">
           <v-btn-toggle mandatory center>
             <v-btn
-              center
+            @click="limpaCategoria"
+            center
               rounded
               elevation="2"
               color="yellow darken-2"
@@ -14,6 +15,7 @@
               class="text-center black--text"
               v-bind="attrs"
               v-on="on"
+              
             >
               Nova Categoria
             </v-btn>
@@ -80,14 +82,17 @@
 
     <v-row v-show="!hidden">
       <v-col offset-lg="2" lg="8" md="12">
-        <div>
-          <v-text-field
-            label="Pesquisa..."
-            v-model="search"
-            @keypress.enter="searchCategoria"
-          ></v-text-field>
-        </div>
+          <div>
+            <v-text-field
+              label="Pesquisa..."
+              v-model="search"
+              @keypress.enter="searchCategoria"
+            ></v-text-field>
+          </div>
       </v-col>
+      </v-row>
+
+    <v-row v-show="!hidden">
       <v-col offset-lg="2" lg="8" md="12">
         <v-simple-table>
           <thead>
@@ -103,28 +108,21 @@
               :class="categoria.feita ? 'lighten-4 orange' : ''"
             >
               <td class="text-left">
-                <v-btn
-                  block
-                  rounded-2
-                  elevation="2"
-                  color="green lighten-2"
-                  class="white--text"
-                  @click="salvarAnime"
-                >
+                <div class="sty--categ">
                   {{ categoria.nome }}
-                </v-btn>
+                </div>
               </td>
-              <td>
-                <v-btn-toggle center align="center" justify="center">
+              <td align="right">
+                <v-btn-toggle center align="right" justify="right">
                   <v-btn
-                    class="yellow darken white--text center"
+                    class="yellow darken white--text right"
                     @click="alterarCategoria(categoria)"
                   >
                     <v-icon center>mdi-wrench</v-icon>
                   </v-btn>
 
                   <v-btn
-                    class="yellow darken-2 center"
+                    class="yellow darken-2 right"
                     @click="removerCategoria(categoria.id)"
                     center
                   >
@@ -228,4 +226,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+  .sty--categ{
+    background-color: #388e3c;
+    padding: 5px;
+    border-radius:5px ;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+
+
+  }
+</style>
