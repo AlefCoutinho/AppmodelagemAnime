@@ -79,6 +79,26 @@
       "statusDoAnime": "Em lançamento",
       "nota": "13",
       "id": 5
+    },
+    {
+      "id": 6,
+      "nome": "EDUARDO",
+      "diretor": "RODRIGUES",
+      "estudio": "ESADA",
+      "qtdtemporadas": "1231",
+      "sinopse": "TEXTO",
+      "categorias": [
+        "Demônios",
+        "Drama"
+      ],
+      "plataformas": [
+        "Netflix"
+      ],
+      "dtlancamento": "2022-10-06",
+      "qtdEp": "12",
+      "statusDoAnime": "Finalizado",
+      "nota": "123",
+      "imgcapa": "https://static-cse.canva.com/blob/759754/IMAGE1.jpg"
     }
   ],
   "plataforma": [

@@ -1,6 +1,6 @@
 <template>
   <div class="plataforma">
-    <h1>Plataforma Page</h1>
+    <!--   -->
     <PlataformaForm/>
   </div>
 </template>
