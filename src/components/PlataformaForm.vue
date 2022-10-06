@@ -100,7 +100,7 @@
             <v-col offset-lg="2" lg="8" md="12">
                 <v-simple-table>
                     <thead>
-                        <tr>
+                        <tr class="yellow darken-2 rounded" style="text-align:center" center>
                             <th class="text-left" style="width: 60%">
                                 Plataforma
                             </th>

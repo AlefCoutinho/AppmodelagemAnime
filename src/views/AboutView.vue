@@ -1,9 +1,9 @@
 <template>
   <v-container>
-    <strong class="">Projeto</strong>
+    <!-- <strong class="">Projeto</strong> -->
 
     <ul>
-      <li 
+      <li
         v-for="(dev_p, i) in github"
         target="_blank"
         :key="i"
@@ -12,9 +12,12 @@
         dark
         icon
       >
-        
-        <h3 > <v-icon size="24px"> mdi-github </v-icon> {{ dev_p.nome }}</h3>
-        {{dev_p.funcao}}
+        <h3 class="rounded inline-block">
+          <a :href="dev_p.link" target="_blank">
+            <v-icon size="24px"> mdi-github </v-icon> {{ dev_p.nome }} 
+          </a>
+        </h3>
+        {{ dev_p.funcao }}
       </li>
     </ul>
   </v-container>
@@ -59,21 +62,25 @@ export default {
 };
 </script>
 <style>
-a.mm {
+.mm a{
   text-decoration: none;
-  color: white !important;
+  color: #031f03 !important;
   padding: 20px;
 }
-a.mm:hover {
-  text-decoration: none;
+.mm a:hover {
+  text-decoration: none ;
   color: #00000080 !important;
 }
 .v-card__title {
   justify-content: center;
 }
 
+li {
+  list-style: none;
+  padding: 5px;
+}
 
-li{
-  list-style:none;
+h3 {
+  background: #FFFDE7;
 }
 </style>

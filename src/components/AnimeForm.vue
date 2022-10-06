@@ -459,7 +459,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 /* BARRA DE ROLAGEM */
 div::-webkit-scrollbar {
   width: 8px; /* width of the entire scrollbar */
