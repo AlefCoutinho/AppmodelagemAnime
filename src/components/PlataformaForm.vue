@@ -6,7 +6,7 @@
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn-toggle mandatory center>
                         <v-btn
-                            @click="limpaCategoria"
+                            @click="limpaPlataforma"
                             center
                             rounded
                             elevation="2"
@@ -128,14 +128,14 @@
                                 >
                                     <v-btn
                                         class="yellow darken white--text right"
-                                        @click="alterarPlataforma(categoria)"
+                                        @click="alterarPlataforma(plataforma)"
                                     >
                                         <v-icon center>mdi-wrench</v-icon>
                                     </v-btn>
 
                                     <v-btn
                                         class="yellow darken-2 right"
-                                        @click="removerPlataforma(categoria.id)"
+                                        @click="removerPlataforma(plataforma.id)"
                                         center
                                     >
                                         <v-icon center>mdi-cancel</v-icon>
