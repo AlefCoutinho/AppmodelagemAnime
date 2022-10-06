@@ -34,35 +34,38 @@
 
                 </v-col>
             <v-col offset-lg="2" lg="8" md="12">
-            <v-simple-table>
-                <thead>
-                <tr>
-                    <th class="text-left" style="width: 60%">Plataforma</th>
-                    <th class="text-left">Tipo Serviço</th>
-                    <th class="text-left">Ação</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(plataforma, indice) in listaPlataforma"
-                        :key="indice"
-                        :class="plataforma.feita ? 'lighten-4 orange' : ''"
-                    >
-                        <td class="text-left">{{ plataforma.plataforma }}</td>
-                        <td class="text-left">{{ plataforma.tipoServico }}</td>
-                        <td>
-                            <v-btn class="orange  lighten-1 white--text" @click="alterarPlataforma(plataforma)">
-                                <v-icon left>mdi-wrench </v-icon>
-                                Alterar
-                            </v-btn>
-                            <v-btn class="red lighten-1 white--text" @click="removerPlataforma(plataforma.id)">
-                                <v-icon dark left>mdi-cancel </v-icon>
-                                Remover
-                            </v-btn>
-
-                        </td>
-                    </tr>
-                </tbody>
-            </v-simple-table>
+                <div v-if="listaPlataforma.length == 0"> <h1>Não foi encontrado nenhum registro!</h1></div>
+                <div v-else>
+                    <v-simple-table>
+                        <thead>
+                        <tr>
+                            <th class="text-left" style="width: 60%">Plataforma</th>
+                            <th class="text-left">Tipo Serviço</th>
+                            <th class="text-left">Ação</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(plataforma, indice) in listaPlataforma"
+                                :key="indice"
+                                :class="plataforma.feita ? 'lighten-4 orange' : ''"
+                            >
+                                <td class="text-left">{{ plataforma.plataforma }}</td>
+                                <td class="text-left">{{ plataforma.tipoServico }}</td>
+                                <td>
+                                    <v-btn class="orange  lighten-1 white--text" @click="alterarPlataforma(plataforma)">
+                                        <v-icon left>mdi-wrench </v-icon>
+                                        Alterar
+                                    </v-btn>
+                                    <v-btn class="red lighten-1 white--text" @click="removerPlataforma(plataforma.id)">
+                                        <v-icon dark left>mdi-cancel </v-icon>
+                                        Remover
+                                    </v-btn>
+    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </v-simple-table>
+                </div>
             </v-col>
         </v-row>
     </v-container>

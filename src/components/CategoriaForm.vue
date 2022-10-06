@@ -95,45 +95,48 @@
 
     <v-row v-show="!hidden">
       <v-col offset-lg="2" lg="8" md="12">
-        <v-simple-table>
-          <thead>
-            <tr>
-              <th class="text-left" style="width: 80%">Categoria</th>
-              <th class="text-left" style="width: 20%">Ação</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              v-for="(categoria, indice) in listaCategoria"
-              :key="indice"
-              :class="categoria.feita ? 'lighten-4 orange' : ''"
-            >
-              <td class="text-left">
-                <div class="sty--categ">
-                  {{ categoria.nome }}
-                </div>
-              </td>
-              <td align="right">
-                <v-btn-toggle center align="right" justify="right">
-                  <v-btn
-                    class="yellow darken white--text right"
-                    @click="alterarCategoria(categoria)"
-                  >
-                    <v-icon center>mdi-wrench</v-icon>
-                  </v-btn>
-
-                  <v-btn
-                    class="yellow darken-2 right"
-                    @click="removerCategoria(categoria.id)"
-                    center
-                  >
-                    <v-icon center>mdi-cancel</v-icon>
-                  </v-btn>
-                </v-btn-toggle>
-              </td>
-            </tr>
-          </tbody>
-        </v-simple-table>
+        <div v-if="listaCategoria.length == 0"> <h1>Não foi encontrado nenhum registro!</h1></div>
+        <div v-else>
+          <v-simple-table>
+            <thead>
+              <tr>
+                <th class="text-left" style="width: 80%">Categoria</th>
+                <th class="text-left" style="width: 20%">Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                v-for="(categoria, indice) in listaCategoria"
+                :key="indice"
+                :class="categoria.feita ? 'lighten-4 orange' : ''"
+              >
+                <td class="text-left">
+                  <div class="sty--categ">
+                    {{ categoria.nome }}
+                  </div>
+                </td>
+                <td align="right">
+                  <v-btn-toggle center align="right" justify="right">
+                    <v-btn
+                      class="yellow darken white--text right"
+                      @click="alterarCategoria(categoria)"
+                    >
+                      <v-icon center>mdi-wrench</v-icon>
+                    </v-btn>
+  
+                    <v-btn
+                      class="yellow darken-2 right"
+                      @click="removerCategoria(categoria.id)"
+                      center
+                    >
+                      <v-icon center>mdi-cancel</v-icon>
+                    </v-btn>
+                  </v-btn-toggle>
+                </td>
+              </tr>
+            </tbody>
+          </v-simple-table>
+        </div>
       </v-col>
     </v-row>
   </v-container>

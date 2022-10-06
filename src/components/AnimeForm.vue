@@ -203,9 +203,12 @@
           </div>
       </v-col>
     </v-row>
+
     <!-- bloco do código para a exibição dos animes -->
     <v-row class="text-center" v-show="!hidden">
       <v-col offset-lg="1" lg="10" ms="12">
+              <div v-if="listaAnime.length == 0"> <h1>Não foi encontrado nenhum registro!</h1></div>
+
               <div class="bloco--anime" v-for="(anime, indice) in listaAnime" :key="indice">
                 
                 
@@ -320,6 +323,7 @@ export default {
       const req = await fetch("http://localhost:3000/anime?q=" + this.search);
       const data = await req.json();
       this.listaAnime = data;
+      console.log(this.listaAnime)
     },
     setCategoria() {
       if (!this.anime.categorias.includes(this.addCategoria) && this.addCategoria != "") {
