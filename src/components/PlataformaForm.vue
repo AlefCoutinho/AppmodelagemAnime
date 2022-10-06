@@ -83,7 +83,8 @@
                 </v-card>
             </v-dialog>
         </div>
-        <v-row class="text-center lighten-4 blue">
+
+        <v-row v-show="!hidden">
             <v-col offset-lg="2" lg="8" md="12">
                 <div>
                     <v-text-field
@@ -93,6 +94,9 @@
                     ></v-text-field>
                 </div>
             </v-col>
+        </v-row>
+
+        <v-row class="text-center" v-show="!hidden">
             <v-col offset-lg="2" lg="8" md="12">
                 <v-simple-table>
                     <thead>
@@ -117,20 +121,26 @@
                                 {{ plataforma.tipoServico }}
                             </td>
                             <td>
-                                <v-btn
-                                    class="orange lighten-1 white--text"
-                                    @click="alterarPlataforma(plataforma)"
+                                <v-btn-toggle
+                                    center
+                                    align="right"
+                                    justify="right"
                                 >
-                                    <v-icon left>mdi-wrench </v-icon>
-                                    Alterar
-                                </v-btn>
-                                <v-btn
-                                    class="red lighten-1 white--text"
-                                    @click="removerPlataforma(plataforma.id)"
-                                >
-                                    <v-icon dark left>mdi-cancel </v-icon>
-                                    Remover
-                                </v-btn>
+                                    <v-btn
+                                        class="yellow darken white--text right"
+                                        @click="alterarPlataforma(categoria)"
+                                    >
+                                        <v-icon center>mdi-wrench</v-icon>
+                                    </v-btn>
+
+                                    <v-btn
+                                        class="yellow darken-2 right"
+                                        @click="removerPlataforma(categoria.id)"
+                                        center
+                                    >
+                                        <v-icon center>mdi-cancel</v-icon>
+                                    </v-btn>
+                                </v-btn-toggle>
                             </td>
                         </tr>
                     </tbody>
@@ -212,11 +222,14 @@ export default {
 
             this.getPlataforma();
             this.limpaPlataforma();
+            this.dialog = false;
+            this.limpaPlataforma();
         },
         // MÉTODO QUE VAI ALTERAR I INDICE PARA A EDIÇÃO DO VALOR
         async alterarPlataforma(plat) {
             this.indice = plat.id;
             this.plataforma = plat;
+            this.dialog = true;
         },
         // MÉTODO QUE VAI REMOVER O OBJETO
         async removerPlataforma(indice) {
