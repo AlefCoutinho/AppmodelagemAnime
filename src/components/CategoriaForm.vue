@@ -50,11 +50,11 @@
                 <v-form v-model="valid">
                   <v-row>
                     <v-col cols="12">
-                      <v-text-field
-                        label="Categoria"
-                        v-model="categoria.nome"
-                        @keypress.enter="salvarCategoria"
-                      ></v-text-field>
+                        <v-text-field
+                          label="Categoria"
+                          v-model="categoria.nome"
+                          @keypress.enter="salvarCategoria"
+                        ></v-text-field>
                     </v-col>
                   </v-row>
                 </v-form>
@@ -80,18 +80,18 @@
       </v-dialog>
     </div>
 
-    <v-row v-show="!hidden">
-      <v-col offset-lg="2" lg="8" md="12">
-          <div>
-            <v-text-field
-              label="Pesquisa..."
-              v-model="search"
-              @keypress.enter="searchCategoria"
-              @keyup="searchCategoria"
-            ></v-text-field>
-          </div>
-      </v-col>
-    </v-row>
+      <!-- <v-row v-show="!hidden">
+        <v-col offset-lg="2" lg="8" md="12">
+            <div>
+              <v-text-field
+                label="Pesquisa..."
+                v-model="search"
+                @keypress.enter="searchCategoria"
+                @keyup="searchCategoria"
+              ></v-text-field>
+            </div>
+        </v-col>
+      </v-row> -->
 
     <v-row v-show="!hidden">
       <v-col offset-lg="2" lg="8" md="12">
