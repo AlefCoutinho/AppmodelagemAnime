@@ -2,15 +2,15 @@
   <v-app-bar app color="green darken-2">
     <div class="d-flex align-center">
       <!-- adiciona o logo vuetify -->
-      <!-- <v-img
+      <v-img
                 alt="LOLIZINHA"
                 class="shrink mr-12"
                 contain
-                src="../../src/assets/EGIRL.png"
+                src="../../src/assets/logo_01.png"
                 transition="scale-transition"
                 width="40"
-            /> -->
-      LOLIZINHA
+            />
+      
       <!-- adiciona o nome (imagem) vuetify -->
       <!-- <v-img
         alt="Vuetify Name"
@@ -21,8 +21,11 @@
         width="100"
       /> -->
     </div>
+    <strong> LIST ANIME </strong>
+   
     <!-- cria um espaço -->
     <v-spacer></v-spacer>
+    
     <div class="text-center" center>
       <v-menu offset-x>
         <template v-slot:activator="{ on, attrs }">
