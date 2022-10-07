@@ -1,4 +1,5 @@
 <template>
+  <div class="geral-home">
   <v-carousel hide-delimiters>
     <v-carousel-item
       v-for="(item,i) in items"
@@ -21,6 +22,10 @@
           </v-row>
         </v-sheet></v-carousel-item>
   </v-carousel>
+  <div class="titulo-home"><h3> site perfeito para Achar e compartilhar seu anime preferido</h3></div>
+  <div class="titulo-corpo">Neste site você pode cadastrar e/ou procurar um anime, selecionando por plataforma e/ou anime, vendo em qual plataforma este anime está.<v-spacer></v-spacer>
+  </div>
+</div>
 </template>
 
 <script>
@@ -48,5 +53,17 @@
 <style>
   .v-main{
   padding: 56px 0px 60px!important;
+}
+.titulo-home{
+  margin: 20px 20px 20px 20px;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.titulo-corpo{
+  margin: 20px 20px 20px 20px;
+  align-items: center;
+  text-align: center;
 }
 </style>
