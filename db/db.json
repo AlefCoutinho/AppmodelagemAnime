@@ -103,11 +103,6 @@
   ],
   "plataforma": [
     {
-      "id": 1,
-      "plataforma": "Crunchyroll",
-      "tipoServico": "Pago"
-    },
-    {
       "id": 2,
       "plataforma": "Netflix",
       "tipoServico": "Pago"
